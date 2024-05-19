@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Ki_7\\PRN221\\CProject\\Calofit_Project\\Calofit_Project\\Calofit_Project.csproj": {}
+    "D:\\Ki_8\\PRN231\\Calofit_Project\\Calofit_Project\\Calofit_Project.csproj": {}
   },
   "projects": {
-    "D:\\Ki_7\\PRN221\\CProject\\Calofit_Project\\Calofit_Project\\Calofit_Project.csproj": {
+    "D:\\Ki_8\\PRN231\\Calofit_Project\\Calofit_Project\\Calofit_Project.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Ki_7\\PRN221\\CProject\\Calofit_Project\\Calofit_Project\\Calofit_Project.csproj",
+        "projectUniqueName": "D:\\Ki_8\\PRN231\\Calofit_Project\\Calofit_Project\\Calofit_Project.csproj",
         "projectName": "Calofit_Project",
-        "projectPath": "D:\\Ki_7\\PRN221\\CProject\\Calofit_Project\\Calofit_Project\\Calofit_Project.csproj",
+        "projectPath": "D:\\Ki_8\\PRN231\\Calofit_Project\\Calofit_Project\\Calofit_Project.csproj",
         "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
-        "outputPath": "D:\\Ki_7\\PRN221\\CProject\\Calofit_Project\\Calofit_Project\\obj\\",
+        "outputPath": "D:\\Ki_8\\PRN231\\Calofit_Project\\Calofit_Project\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -39,6 +39,22 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.29, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[6.0.29, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

@@ -1,3 +1,5 @@
+using Calofit_Project.CommonService;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
