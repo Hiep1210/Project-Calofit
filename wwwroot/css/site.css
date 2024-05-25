@@ -132,6 +132,15 @@ header {
     animation-duration: 1.5s;
 }
 
+.des{
+    overflow: scroll;
+    max-height: 200px;
+}
+
+.des::-webkit-scrollbar {
+    display: none;
+}
+
 @keyframes fade {
     from {
         opacity: .4
