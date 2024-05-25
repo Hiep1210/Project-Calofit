@@ -1,8 +1,100 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Index";
 }
+<div class="w-100">
+    <div class="slideshow_container w-100">
+        <div class="w-100 h-25 container mySlides ">
+            <img src="~/imageResource/logo.png" class="w-100 slide " style="object-fit: cover; height: 400px" />
+            <div class="overlay">
+                <div class="text">Food Information</div>
+            </div>
+        </div>
+        <div class="w-100 h-25 container mySlides ">
+            <img src="~/imageResource/home_page_image_4.png" class="w-100 slide" style="object-fit: cover; height: 400px" />
+            <div class="overlay">
+                <div class="text">Food Information</div>
+            </div>
+        </div>
+        <div class="w-100 h-25 container mySlides ">
+            <img src="~/imageResource/home_page_image_6.png" class="w-100 slide" style="object-fit: cover; height: 400px" />
+            <div class="overlay">
+                <div class="text">Food Information</div>
+            </div>
+        </div>
+        <!-- Next and previous buttons -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <div>
+        <h1 class="text-center" style="color: darkgreen">Recipes</h1>
+    </div>
+    <div>
+        <div class="row border-bottom border-warning mt-5 mb-5">
+            <div class="col-6">
+                <h3>Lorem ipsum</h3>
+                <p>
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen
+                </p>
+            </div>
+            <div class="col-6 mb-5">
+                <img src="~/imageResource/home_page_image_6.png" class="w-100" style="object-fit: cover;" />
+            </div>
+        </div>
+        <div class="row border-bottom border-warning mt-5 mb-5">
+            <div class="col-6 mb-5">
+                <img src="~/imageResource/home_page_image_6.png" class="w-100" style="object-fit: cover;" />
+            </div>
+            <div class="col-6 mb-5">
+                <h3>Lorem ipsum</h3>
+                <p>
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen
+                </p>
+            </div>
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+        </div>
+        <div class="row border-bottom border-warning mt-5 mb-5">
+            <div class="col-6 ">
+                <h3>Lorem ipsum</h3>
+                <p>
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen
+                </p>
+            </div>
+            <div class="col-6 mb-5">
+                <img src="~/imageResource/home_page_image_6.png" class="w-100" style="object-fit: cover;" />
+            </div>
+        </div>
+    </div>
 </div>
+<script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    // Next/previous controls
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    // Thumbnail image controls
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+        if (n > slides.length) { slideIndex = 1 }
+        if (n < 1) { slideIndex = slides.length }
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+    }
+</script>

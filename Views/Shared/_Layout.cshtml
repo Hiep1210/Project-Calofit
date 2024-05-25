@@ -3,47 +3,81 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - Calofit_Project</title>
+    <title>
+        Calofity
+    </title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/Calofit_Project.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+          integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Calofit_Project</a>
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index" style="width: fit-content"><img src="~/imageResource/logo.png" width="50" height="60" style="min-width: fit-content" /></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between text-center">
                     <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                        @* <li class="nav-item">
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                        </li> *@
+                        <li class="nav-item w-100 text-center">
+                            <input style="width: 70%" class="rounded" type="text" placeholder="Search your recipe, ingredient, dish!" width="80" " />
+                            <i class="material-icons navbar-item-icon">search</i>
                         </li>
                     </ul>
+                </div>
+                <div style="text-align:right" class="col-lg-3 navbar-user-profile dropdown nav-right">
+                    <!-- Dropdown toggler -->
+                    <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="material-icons navbar-item-icon">account_circle</i>
+                    </button>
+                    <!-- Dropdown menu -->
+                    <div class="dropdown-menu dropdown-menu-end">
+                        <a class="dropdown-item" asp-action="ViewPost">View Your Post</a>
+                        <a class="dropdown-item" asp-action="Profile" asp-route-id="">Profile</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" asp-action="LogOut">Log out</a>
+                    </div>
+                    <div class="dropdown-menu dropdown-menu-end">
+                        <a class="dropdown-item" asp-action="SignUp">Sign Up</a>
+                        <a class="dropdown-item" asp-action="LogIn">Log In</a>
+                    </div>
                 </div>
             </div>
         </nav>
     </header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
+    <div class="container w-100">
+        <main role="main" class="pb-3 w-100">
+                            @RenderBody()
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
+    <footer class="border-top footer text-muted bg-warning" style="min-width: 1em; padding: 25px 0 25px 0">
+        <div class="container w-100 ">
             &copy; 2024 - Calofit_Project - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            <h2 class="text-center">Contact</h2>
+            <p class="text-center">
+                500 Terry Francine Street <br>
+                San Francisco, CA 94158 <br>
+                info@mysite.com <br>
+                123-456-7890 <br>
+            </p>
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
-    @await RenderSectionAsync("Scripts", required: false)
+                            @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
