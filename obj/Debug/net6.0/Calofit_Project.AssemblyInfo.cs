@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Calofit_Project")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e1d1de8cabcdc5fdee1b51d3aafd25ece2008485")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6846d041e44483120c554c18f0cb5ff2d150dcd2")]
 [assembly: System.Reflection.AssemblyProductAttribute("Calofit_Project")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Calofit_Project")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
